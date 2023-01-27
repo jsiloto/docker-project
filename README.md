@@ -73,7 +73,12 @@ docker run --rm -it -p 8123:8888 ${USER}/docker-image \
 ```
 
 ### DockerHub
+You can do the same thing we did building a custom image 
+by exploring existing images in the community.
+In this case `jupyter/datascience-notebook`
 
 ```bash
 docker run --rm -it --network host  -v $PWD:/work -w /work jupyter/datascience-notebook jupyter notebook --no-browser -NotebookApp.token='ABC'
 ```
+
+Check out more at https://hub.docker.com/
