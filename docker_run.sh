@@ -29,8 +29,8 @@ COMMAND="docker run --rm -it \
             -v $PWD:/work -w /work \
             -u $(id -u):$(id -g)  \
             --userns=host  \
-            --gpus=\"${g}\" \
-            --userns=host  \
+	    --gpus='"device=${g}"' \
+	    --userns=host  \
             --net=host \
             --name ${USER}.gpu${g}   \
             ${USER}/docker-image:latest $1"
