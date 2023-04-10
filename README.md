@@ -78,7 +78,7 @@ by exploring existing images in the community.
 In this case `jupyter/datascience-notebook`
 
 ```bash
-docker run --rm -it --network host  -v $PWD:/work -w /work jupyter/datascience-notebook jupyter notebook --no-browser -NotebookApp.token='ABC'
+docker run --rm -it --network host  -v $PWD:/work -w /work jupyter/datascience-notebook jupyter notebook --no-browser -NotebookApp.token='ABC' -ip 0.0.0.0 -NotebookApp.allow_origin='*'
 ```
 
 Check out more at https://hub.docker.com/

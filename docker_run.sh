@@ -30,7 +30,6 @@ COMMAND="docker run --rm -it \
             -u $(id -u):$(id -g)  \
             --userns=host  \
 	    --gpus='"device=${g}"' \
-	    --userns=host  \
             --net=host \
             --name ${USER}.gpu${g}   \
             ${USER}/docker-image:latest $1"
